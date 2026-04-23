@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @pets.each do |pet| %>
+    <% Pet.by_species("dog").each do |pet| %>
       <tr>
         <td><%= link_to pet.name, pet_path(pet) %></td>
         <td><%= pet.species %></td>

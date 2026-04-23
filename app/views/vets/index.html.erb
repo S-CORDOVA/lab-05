@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @vets.each do |vet| %>
+    <% Vet.by_specialization("Vaccination").each do |vet| %>
       <tr>
         <td><%= link_to "#{vet.first_name} #{vet.last_name}", vet_path(vet) %></td>
         <td><%= vet.email %></td>
